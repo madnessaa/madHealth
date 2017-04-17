@@ -9,9 +9,9 @@ namespace madHealth.Database
     public class AnalysisResult:Basic
     {
         public int Id { get; set; }
-        public string Result { get; set; }
+        public string Title { get; set; } 
         public AnalysisStatus Status { get; set; }
-        public AnalysisType Type { get; set; }
+        public virtual AnalysisType Type { get; set; }
         public string Description { get; set; } 
     }
 }

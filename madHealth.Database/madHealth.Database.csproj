@@ -57,9 +57,11 @@
     <Compile Include="AnalysisType.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="Basic.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Diagnosis.cs" />
     <Compile Include="DiagnosisType.cs" />
     <Compile Include="MaritialStatus.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

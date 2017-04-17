@@ -10,6 +10,16 @@ namespace madHealth.Database
     {
         static void Main(string[] args)
         {
+            var db = new Context();
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (System.Exception ex)
+            {
+
+            }
 
         }
     }

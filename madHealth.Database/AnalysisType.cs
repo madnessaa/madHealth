@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace madHealth.Database
 {
-    public class AnalysisType
+    public class AnalysisType:Basic
     {
         public int Id { get; set; }
         public string Title { get; set; }
