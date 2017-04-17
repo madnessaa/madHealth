@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace madHealth.Database
 {
-    class Program
+    public enum AnalysisStatus   
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Negative = 1,
+        Positive,
+        Inconclusive
     }
 }
