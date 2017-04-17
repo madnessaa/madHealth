@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace madHealth.Database
 {
-    class Program
+    public class AnalysisType
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }

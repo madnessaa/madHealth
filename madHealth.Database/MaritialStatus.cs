@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace madHealth.Database
 {
-    class Program
+    public enum MarritialStatus
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Married = 1,
+        Single
     }
 }
