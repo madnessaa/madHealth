@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madHealth", "madHealth\madHealth.csproj", "{24FAE0F1-530F-4FD4-8D07-BFA9F7612FF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madHealth.Database", "madHealth.Database\madHealth.Database.csproj", "{1C542E00-6D7F-4A4B-A426-168BBA0F1768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24FAE0F1-530F-4FD4-8D07-BFA9F7612FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24FAE0F1-530F-4FD4-8D07-BFA9F7612FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24FAE0F1-530F-4FD4-8D07-BFA9F7612FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24FAE0F1-530F-4FD4-8D07-BFA9F7612FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C542E00-6D7F-4A4B-A426-168BBA0F1768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C542E00-6D7F-4A4B-A426-168BBA0F1768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C542E00-6D7F-4A4B-A426-168BBA0F1768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C542E00-6D7F-4A4B-A426-168BBA0F1768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
