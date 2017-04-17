@@ -9,8 +9,8 @@ namespace madHealth.Database
     public class Diagnosis:Basic
     {
         public int Id { get; set; }
-        public string Name { get; set; } 
-        public Diagnosis DiagnosisType{ get; set; }
-        public string Description { get; set; } 
+        public string Name { get; set; }         
+        public string Description { get; set; }
+        public virtual DiagnosisType DiagnosisType { get; set; }
     }
 }

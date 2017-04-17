@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace madHealth.Database
 {
@@ -16,7 +17,7 @@ namespace madHealth.Database
 
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public Patient Patient { get; set; }
+        public virtual Patient Patient { get; set; }
         public List<Diagnosis> DiagnosisList { get; set; }
         public List<AnalysisResult> AnalysisList { get; set; }
     }
