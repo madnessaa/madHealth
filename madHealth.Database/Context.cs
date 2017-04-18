@@ -20,7 +20,7 @@ namespace madHealth.Database
         public DbSet<AnalysisType> AnalysisTypes { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Diagnosis> Diagnosises { get; set; }
-        public DbSet<DiagnosisType> DiagnosisTypes { get; set; }
+        //public DbSet<DiagnosisType> DiagnosisTypes { get; set; }
         public DbSet<Patient> Patients { get; set; }
 
 
@@ -49,7 +49,11 @@ namespace madHealth.Database
         //SoftDelete logic
         public override int SaveChanges()
         {
-            foreach (var entry in ChangeTracker.Entries().Where(p => p.State == EntityState.Deleted)) SoftDelete(entry);
+            foreach (var entry in ChangeTracker.Entries().Where(p => p.State == EntityState.Deleted))
+            {
+                SoftDelete(entry);
+                entry.State = EntityState.Modified;
+            }
             return base.SaveChanges();
         }
 
