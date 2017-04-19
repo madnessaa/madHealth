@@ -15,11 +15,11 @@ namespace madHealth.Seed
         public static string SourceRoot = @"..\..\..\madHealth.xls";
 
         public static Dictionary<int, int> dicARes = new Dictionary<int, int>();
-        public static Dictionary<int, int> dicATypes = new Dictionary<int, int>(); 
-        //public static Dictionary<int, int> dicCatt = new Dictionary<int, int>();
-        //public static Dictionary<int, int> dicShip = new Dictionary<int, int>();
-        //public static Dictionary<int, int> dicSupp = new Dictionary<int, int>();
-        //public static Dictionary<int, int> dicCust = new Dictionary<int, int>();
+        public static Dictionary<int, int> dicATypes = new Dictionary<int, int>();
+        public static Dictionary<int, int> dicDiag = new Dictionary<int, int>();
+        public static Dictionary<int, int> dicPatient = new Dictionary<int, int>();
+        public static Dictionary<int, int> dicAppt = new Dictionary<int, int>(); 
+
 
         public static DataTable OpenExcel(string sheet)
         {
