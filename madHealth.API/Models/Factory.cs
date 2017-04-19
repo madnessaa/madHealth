@@ -10,6 +10,7 @@ namespace madHealth.API.Models
     public class Factory
     {
         private UnitOfWork _unitOfWork;
+
         public Factory(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -35,6 +36,33 @@ namespace madHealth.API.Models
             };
         }
 
+
+        public AnalysisResultModel Create(AnalysisResult AResult)
+        {
+            return new AnalysisResultModel()
+            {
+                Id = AResult.Id,
+                Title = AResult.Title,
+                Description = AResult.Description,
+                Status = (AnalysisStatus)AResult.Status,               
+                AppointmentID = AResult.AppointmentID,
+                Type = AResult.Type.Id
+            };
+        }
+
+        public AnalysisResult Create(AnalysisResultModel model)
+        {
+            return new AnalysisResult()
+            {
+                Id = model.Id,
+                Title = model.Title,
+                Description = model.Description,
+                Status = (AnalysisStatus)model.Status,
+                AppointmentID = model.AppointmentID,
+                Type = _unitOfWork.AnalysisTypes.Get(model.Type)
+                // AppointmentID = _unitOfWork.AnalysisResults.Get(model.AppointmentID),
+            };
+        }
 
     }
 }

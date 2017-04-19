@@ -1,27 +1,26 @@
-﻿using System;
+﻿using madHealth.API.Models;
+using madHealth.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using madHealth.Repository;
-using madHealth.API.Models;
-using madHealth.Database;
 
 namespace madHealth.API.Controllers
 {
-    [RoutePrefix("api/analysistypes")]
-    public class AnalysisTypesController : BaseController
+    [RoutePrefix("api/analysisresults")]
+    public class AnalysisResultsController : BaseController
     {
         [Route("")]
         public IHttpActionResult Get()
         {
             try
             {
-                return Ok(UnitOfWork.AnalysisTypes.Get().ToList().Select(x => Factory.Create(x)).ToList());
+                return Ok(UnitOfWork.AnalysisResults.Get().ToList().Select(x => Factory.Create(x)).ToList());
             }
             catch (Exception ex)
-            {                
+            {
                 return BadRequest(ex.Message);
             }
         }
@@ -29,15 +28,16 @@ namespace madHealth.API.Controllers
         [Route("{title}")]
         public IHttpActionResult Get(string title)
         {
-            return Ok(UnitOfWork.AnalysisTypes.Get().Where(x => x.Title.Contains(title)).ToList().Select(x => Factory.Create(x)).ToList());
+            return Ok(UnitOfWork.AnalysisResults.Get().Where(x => x.Title.Contains(title)).ToList().Select(x => Factory.Create(x)).ToList());
         }
+
 
         [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             try
             {
-                AnalysisType type = UnitOfWork.AnalysisTypes.Get(id);
+                AnalysisResult type = UnitOfWork.AnalysisResults.Get(id); 
                 if (type == null)
                 {
                     return NotFound();
@@ -49,40 +49,40 @@ namespace madHealth.API.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 return BadRequest(ex.Message);
             }
         }
 
         [Route("")]
-        public IHttpActionResult Post(AnalysisTypeModel model)
+        public IHttpActionResult Post(AnalysisResultModel model)
         {
             try
             {
-                AnalysisType type = Factory.Create(model);
-                UnitOfWork.AnalysisTypes.Insert(type);
+                AnalysisResult result = Factory.Create(model);
+                UnitOfWork.AnalysisResults.Insert(result);
                 UnitOfWork.Commit();
-                return Ok(Factory.Create(type));
+                return Ok(Factory.Create(result));
             }
             catch (Exception ex)
             {
-               
+
                 return BadRequest(ex.Message);
             }
         }
 
         [Route("{id}")]
-        public IHttpActionResult Put(int id, AnalysisTypeModel model)
+        public IHttpActionResult Put(int id, AnalysisResultModel model)
         {
             try
             {
-                AnalysisType type = Factory.Create(model);
-                UnitOfWork.AnalysisTypes.Update(type, id);
+                AnalysisResult result = Factory.Create(model);
+                UnitOfWork.AnalysisResults.Update(result, id);
                 UnitOfWork.Commit();
-                return Ok(Factory.Create(type));
+                return Ok(Factory.Create(result));
             }
             catch (Exception ex)
-            {                
+            {
                 return BadRequest(ex.Message);
             }
         }
@@ -92,14 +92,14 @@ namespace madHealth.API.Controllers
         {
             try
             {
-                AnalysisType entity = UnitOfWork.AnalysisTypes.Get(id);
+                AnalysisResult entity = UnitOfWork.AnalysisResults.Get(id);
                 if (entity == null) return NotFound();
-                UnitOfWork.AnalysisTypes.Delete(id);
+                UnitOfWork.AnalysisResults.Delete(id);
                 UnitOfWork.Commit();
                 return Ok();
             }
             catch (Exception ex)
-            {                
+            {
                 return BadRequest(ex.Message);
             }
         }
