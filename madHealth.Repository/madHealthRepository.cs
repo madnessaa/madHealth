@@ -53,5 +53,17 @@ namespace madHealth.Repository
         {
             return (context.SaveChanges() > 0);
         }
+
+        //public void InsertOrUpdate(Entity entity)
+        //{
+        //    if (entity == default(Entity))
+        //    {
+        //        dbSet.Add(entity);
+        //     }
+        //    else
+        //    {
+        //        context.Entry(entity).State = EntityState.Modified;
+        //    }
+        //}
     }
 }
