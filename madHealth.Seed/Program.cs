@@ -13,8 +13,11 @@ namespace madHealth.Seed
         {
 
             Console.WriteLine("Data migration in progress");
-            Console.WriteLine("--------------------------");            
-            AnalysisTypes.Get();
+            Console.WriteLine("--------------------------");
+            AnalysisTypes.Get();            
+            Patients.Get();
+            Appointments.Get();
+            Diagnosises.Get();
             AnalysisResults.Get();
             Console.WriteLine("-------------------------");
             Console.WriteLine("Press any key to continue");

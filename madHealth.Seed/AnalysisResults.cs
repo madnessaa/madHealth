@@ -28,7 +28,8 @@ namespace madHealth.Seed
                     Title = Help.getString(row, 1),
                     Type = atype,
                     Description = Help.getString(row,3),
-                    Status = (AnalysisStatus)Help.getInteger(row, 2),                    
+                    Status = (AnalysisStatus)Help.getInteger(row, 2),
+                    AppointmentID = Help.getInteger(row, 5)
                 };
                 N++;
                 analysisresults.Insert(result);

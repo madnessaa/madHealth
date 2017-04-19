@@ -16,9 +16,9 @@ namespace madHealth.Database
         }
 
         public int Id { get; set; }
-        public DateTime Date { get; set; }
-        public virtual Patient Patient { get; set; }
+        public DateTime Date { get; set; }        
         public List<Diagnosis> DiagnosisList { get; set; }
         public List<AnalysisResult> AnalysisList { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }
