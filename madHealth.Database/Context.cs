@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace madHealth.Database
 {
-    public class Context:DbContext
+    public class Context:BaseContext<Context> //:DbContext
     {
-        public Context() : base("name=MadHealth") { }
+        //public Context() : base("name=MadHealth") { }
 
         public DbSet<AnalysisResult> AnalysisResults { get; set; }
         public DbSet<AnalysisType> AnalysisTypes { get; set; }

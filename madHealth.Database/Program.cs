@@ -11,6 +11,19 @@ namespace madHealth.Database
         static void Main(string[] args)
         {
             var db = new Context();
+    
+            AnalysisType tip = new AnalysisType();
+
+            tip.Id = Convert.ToInt32(Console.ReadLine());
+            tip.Title = Console.ReadLine();
+
+            db.AnalysisTypes.Add(tip);
+
+            //Console.WriteLine(tip.Id);
+            // tip.Title = Console.ReadLine();
+
+
+            //Console.WriteLine(id);
 
             try
             {
